@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="shortcut icon" href="./assets/images/to-do-list-96.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/scripts/app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="./assets/images/to-do-list-96.png" alt="todo" width="96px" height="70px">
+            <h1 class="glow">TO DO LIST</h1>
+        </div>
+    </header>
+
+    <section id="app">
+        <div class="app-form">
+            <form action="">
+                <input type="text" name="text" id="text" placeholder="title...">
+                <input type="datetime-local" name="date" id="date">
+                <input type="color" value="#453465">
+                <input type="button" value="ADD" onclick="addLiHandler()">
+            </form>
+        </div>
+
+        <div class="app-tabs">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'All')">All</button>
+                <button class="tablinks" onclick="openCity(event, 'Active')">Active</button>
+                <button class="tablinks" onclick="openCity(event, 'Compelted')">Compelted</button>
+            </div>
+
+            <!-- Tab content -->
+            <div id="All" class="tabcontent">
+                <ul class="cnt">
+                
+                </ul>
+            </div>
+
+            <div id="Active" class="tabcontent">
+
+            </div>
+
+            <div id="Compelted" class="tabcontent">
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

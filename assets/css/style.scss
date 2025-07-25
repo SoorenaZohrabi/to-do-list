@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: aliceblue;
+}
+
+:root {
+    --color1: rgb(15, 15, 15);
+    --color2: rgb(35, 45, 63);
+    --color3: rgb(0, 91, 65);
+    --color4: rgb(0, 129, 112);
+    --color11: rgba(15, 15, 15, 0.5);
+    --color22: rgba(35, 45, 65, 0.5);
+    --color33: rgba(0, 91, 65, 0.5);
+    --color44: rgba(0, 129, 112, 0.5);
+    ;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: var(--color1);
+}
+
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
+header {
+    width: 50%;
+    height: 20vh;
+    margin: auto;
+    margin-top: 1rem;
+    background-color: var(--color22);
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: 0px -2px 8px 1px whitesmoke;
+
+    #logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin: auto;
+        padding-top: 5vh;
+
+        h1 {
+            font-size: 4rem;
+        }
+    }
+}
+
+#app {
+    width: 50%;
+    height: 70vh;
+    margin: auto;
+    background-color: var(--color3);
+    border-radius: 0rem 0rem 01rem 1rem;
+    box-shadow: 0px 2px 8px 1px whitesmoke;
+
+    .app-form {
+        width: 100%;
+        height: 14%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        background-color: var(--color22);
+
+        form {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+
+            textarea:focus,
+            input:focus {
+                outline: none;
+            }
+
+            input {
+                height: 2.5rem;
+                border: none;
+                background-color: transparent;
+            }
+
+            input[type="text"],
+            input[type="datetime-local"] {
+                border-bottom: 0.1rem solid #fff;
+            }
+
+            input[type='text'] {
+                width: 42%;
+            }
+
+            input[type='datetime-local'] {
+                width: 28% !important;
+            }
+
+            input[type='color'] {
+                width: 6%;
+            }
+
+            input[type='button'] {
+                background-color: var(--color1);
+                width: 15%;
+                border-radius: 1rem;
+                cursor: pointer;
+            }
+
+            input:hover {
+                transform: scale(110%);
+            }
+        }
+    }
+
+    .app-tabs {
+        width: 100%;
+
+        .tab {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            overflow: hidden;
+
+            button {
+                background-color: inherit;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                transition: 0.3s;
+            }
+
+            .tabcontent {
+                width: 200px !important;
+            }
+
+        }
+    }
+}
