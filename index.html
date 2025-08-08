@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="./assets/images/to-do-list-96.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/scripts/app.js" defer></script>
+    <script type="module" src="./assets/scripts/app.js" defer></script>
 </head>
 
 <body>
@@ -21,35 +21,26 @@
 
     <section id="app">
         <div class="app-form">
-            <form action="">
+            <form>
                 <input type="text" name="text" id="text" placeholder="title...">
                 <input type="datetime-local" name="date" id="date">
                 <input type="color" value="#453465">
-                <input type="button" value="ADD" onclick="addLiHandler()">
+                <input type="button" value="ADD" id="addBtn">
             </form>
         </div>
 
         <div class="app-tabs">
             <div class="tab">
-                <button class="tablinks" onclick="openCity(event, 'All')">All</button>
-                <button class="tablinks" onclick="openCity(event, 'Active')">Active</button>
-                <button class="tablinks" onclick="openCity(event, 'Compelted')">Compelted</button>
+                <button class="tablinks">All</button>
+                <button class="tablinks">Active</button>
+                <button class="tablinks">Compelted</button>
             </div>
 
             <!-- Tab content -->
-            <div id="All" class="tabcontent">
-                <ul class="cnt">
-                
-                </ul>
+            <div class="tabcontent">
+                <ul class="tabContentList"></ul>
             </div>
 
-            <div id="Active" class="tabcontent">
-
-            </div>
-
-            <div id="Compelted" class="tabcontent">
-
-            </div>
         </div>
     </section>
 </body>

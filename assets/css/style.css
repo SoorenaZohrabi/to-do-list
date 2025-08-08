@@ -69,6 +69,9 @@ header #logo h1 {
   background-color: var(--color3);
   border-radius: 0rem 0rem 1rem 1rem;
   box-shadow: 0px 2px 8px 1px whitesmoke;
+  /* Scrollbar thumb */
+  /* Scrollbar corner (where vertical and horizontal scrollbars meet) */
+  /* Overall scrollbar */
 }
 #app .app-form {
   width: 100%;
@@ -117,6 +120,8 @@ header #logo h1 {
 }
 #app .app-tabs {
   width: 100%;
+  height: 86%;
+  overflow: auto;
 }
 #app .app-tabs .tab {
   width: 50%;
@@ -134,6 +139,20 @@ header #logo h1 {
   padding: 14px 16px;
   transition: 0.3s;
 }
-#app .app-tabs .tab .tabcontent {
-  width: 200px !important;
+#app .app-tabs::-webkit-scrollbar-track {
+  background: rgba(216, 213, 213, 0);
+}
+#app .app-tabs::-webkit-scrollbar-thumb {
+  background: #3ce065;
+  border-radius: 20px;
+  /* Example: rounded corners */
+}
+#app .app-tabs::-webkit-scrollbar-corner {
+  background: #17db38;
+}
+#app .app-tabs::-webkit-scrollbar {
+  width: 10px;
+  /* Width of vertical scrollbar */
+  height: 10px;
+  /* Height of horizontal scrollbar */
 }/*# sourceMappingURL=style.css.map */
