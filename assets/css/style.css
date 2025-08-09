@@ -139,6 +139,39 @@ header #logo h1 {
   padding: 14px 16px;
   transition: 0.3s;
 }
+#app .app-tabs .tabcontent {
+  width: 99%;
+  margin: auto;
+}
+#app .app-tabs .tabcontent .tabContentList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-between;
+}
+#app .app-tabs .tabcontent .tabContentList .item {
+  box-shadow: 0 0 2rem rgba(0, 123, 255, 0.8);
+  width: 80%;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+#app .app-tabs .tabcontent .tabContentList .item #Active {
+  color: #17db38;
+}
+#app .app-tabs .tabcontent .tabContentList .item #deleteBtn {
+  color: rgb(148, 18, 18);
+}
 #app .app-tabs::-webkit-scrollbar-track {
   background: rgba(216, 213, 213, 0);
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
     <link rel="shortcut icon" href="./assets/images/to-do-list-96.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script type="module" src="./assets/scripts/app.js" defer></script>
 </head>
@@ -22,23 +22,24 @@
     <section id="app">
         <div class="app-form">
             <form>
-                <input type="text" name="text" id="text" placeholder="title...">
-                <input type="datetime-local" name="date" id="date">
-                <input type="color" value="#453465">
+                <input type="text" name="text" id="text" placeholder="title..." required>
+                <input type="datetime-local" name="date" id="date" required>
+                <input type="color" value="#453465" id="bgcolor">
                 <input type="button" value="ADD" id="addBtn">
             </form>
         </div>
 
         <div class="app-tabs">
             <div class="tab">
-                <button class="tablinks">All</button>
-                <button class="tablinks">Active</button>
-                <button class="tablinks">Compelted</button>
+                <button class="tablinks" id="All">All</button>
+                <button class="tablinks" id="Active">Active</button>
+                <button class="tablinks" id="Compelted">Compelted</button>
             </div>
 
             <!-- Tab content -->
             <div class="tabcontent">
-                <ul class="tabContentList"></ul>
+                <ul class="tabContentList">
+                </ul>
             </div>
 
         </div>
