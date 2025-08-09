@@ -33,8 +33,9 @@ function getUserInput() {
     }
     const id = (Math.floor(Math.random() * 900000) + 100000).toString();
     const time = date.slice(11, 16);
-    const ndate = date.slice(0, 12);
+    const ndate = date.slice(0, 10);
     saveItem(id, title, ndate, bgColor, time);
+    renderItemsByStatus();
 }
 
 async function saveItem(id, title, date, bgColor, time) {

@@ -101,54 +101,6 @@ export class Item {
         db.close();
     }
 
-    // 🖼️ Render this item as an HTML element
-    render() {
-        const container = document.createElement("div");
-        container.className = "item";
-        container.id = this._id;
-        container.style.backgroundColor = this._bgColor;
-
-        // Status icon
-        const statusIcon = document.createElement("div");
-        statusIcon.className = "fas fa-spinner";
-        statusIcon.id = this._status;
-        container.appendChild(statusIcon);
-
-        // Title
-        const titleDiv = document.createElement("div");
-        titleDiv.id = "title";
-        titleDiv.textContent = this._title;
-        container.appendChild(titleDiv);
-
-        // Date
-        const dateDiv = document.createElement("div");
-        dateDiv.id = "date";
-        dateDiv.textContent = this._date;
-        container.appendChild(dateDiv);
-
-        // Time
-        const timeDiv = document.createElement("div");
-        timeDiv.id = "time";
-        timeDiv.textContent = this._time;
-        container.appendChild(timeDiv);
-
-        // Delete button
-        const deleteBtn = document.createElement("div");
-        deleteBtn.className = "fas fa-trash-alt";
-        deleteBtn.id = "deleteBtn";
-        deleteBtn.style.cursor = "pointer";
-
-        // Optional: attach delete functionality
-        deleteBtn.addEventListener("click", async () => {
-            await this.delete();
-            container.remove();
-        });
-
-        container.appendChild(deleteBtn);
-
-        return container;
-    }
-
     render() {
         const container = document.createElement("div");
         container.className = "item";
